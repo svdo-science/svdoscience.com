@@ -5,17 +5,19 @@ const postCSSImports = require('postcss-import')
 const cssnano = require('cssnano')
 const postCSSMixins = require('postcss-mixins')
 
+const year = new Date().getFullYear()
+
 module.exports = {
   siteMetadata: {
-    title: `Hello Friend`,
-    description: `A simple starter for Gatsby. That's it.`,
-    copyrights: '',
-    author: `@panr`,
+    title: `svdo science`,
+    description: `svdo science. Blog posts about my adventures in code.`,
+    copyrights: `© ${year} svdo science`,
+    author: `@ramojol`,
     logo: {
       src: '',
       alt: '',
     },
-    logoText: 'hello friend',
+    logoText: 'svdo science',
     defaultTheme: 'dark',
     postsPerPage: 5,
     showMenuItems: 2,
@@ -28,10 +30,6 @@ module.exports = {
       {
         title: 'Showcase',
         path: '/showcase',
-      },
-      {
-        title: 'Example',
-        path: '/example',
       },
     ],
   },
