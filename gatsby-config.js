@@ -9,16 +9,16 @@ const year = new Date().getFullYear()
 
 module.exports = {
   siteMetadata: {
-    title: `svdo science`,
-    description: `svdo science. Blog posts about my adventures in code.`,
-    copyrights: `© ${year} svdo science`,
-    author: `@ramojol`,
+    title: `SVDO Science`,
+    description: `SVDO Science. Blog posts about my adventures in code.`,
+    copyrights: `© ${year} SVDO Science`,
+    author: `@ramosjoel`,
     logo: {
       src: '',
       alt: '',
     },
-    logoText: 'svdo science',
-    defaultTheme: 'dark',
+    logoText: 'SVDO Science',
+    defaultTheme: 'light',
     postsPerPage: 5,
     showMenuItems: 2,
     menuMoreText: 'Show more',
@@ -26,10 +26,6 @@ module.exports = {
       {
         title: 'About',
         path: '/about',
-      },
-      {
-        title: 'Showcase',
-        path: '/showcase',
       },
     ],
   },
@@ -112,8 +108,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-hello-friend`,
-        short_name: `hello-friend`,
+        name: `svdo-science`,
+        short_name: `svdo-science`,
         start_url: `/`,
         background_color: `#292a2d`,
         theme_color: `#292a2d`,
