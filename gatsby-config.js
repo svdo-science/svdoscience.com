@@ -5,18 +5,20 @@ const postCSSImports = require('postcss-import')
 const cssnano = require('cssnano')
 const postCSSMixins = require('postcss-mixins')
 
+const year = new Date().getFullYear()
+
 module.exports = {
   siteMetadata: {
-    title: `Hello Friend`,
-    description: `A simple starter for Gatsby. That's it.`,
-    copyrights: '',
-    author: `@panr`,
+    title: `SVDO Science`,
+    description: `SVDO Science. Blog posts about my adventures in code.`,
+    copyrights: `© ${year} SVDO Science`,
+    author: `@ramosjoel`,
     logo: {
       src: '',
       alt: '',
     },
-    logoText: 'hello friend',
-    defaultTheme: 'dark',
+    logoText: 'SVDO Science',
+    defaultTheme: 'light',
     postsPerPage: 5,
     showMenuItems: 2,
     menuMoreText: 'Show more',
@@ -24,14 +26,6 @@ module.exports = {
       {
         title: 'About',
         path: '/about',
-      },
-      {
-        title: 'Showcase',
-        path: '/showcase',
-      },
-      {
-        title: 'Example',
-        path: '/example',
       },
     ],
   },
@@ -114,8 +108,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-hello-friend`,
-        short_name: `hello-friend`,
+        name: `svdo-science`,
+        short_name: `svdo-science`,
         start_url: `/`,
         background_color: `#292a2d`,
         theme_color: `#292a2d`,
