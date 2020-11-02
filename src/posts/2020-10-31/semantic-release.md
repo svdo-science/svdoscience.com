@@ -4,9 +4,11 @@ date: "2020-10-31"
 path: "/2020-10-31/versioning-with-semantic-release"
 coverImage: "./2-semantic-release.png"
 author: "Joel"
-excerpt: "Like most things, if you truly want consistency it's better to have a machine do it..."
+excerpt: "In this post I'll, run through configuring the Semantic Release GitHub Action to automation versioning, creating GitHub Releases, and documenting release notes."
 tags: ["ci", "versioning", "github actions", "dev ops", "semantic release"]
 ---
+
+In this post, I'll run through configuring the Semantic Release GitHub Action to automation versioning, creating GitHub Releases, and documenting release notes.
 
 As I started writing this, it occurred to me that there might be two types of folks reading this.
 - One set who just want the answers to the test
@@ -381,7 +383,7 @@ jobs:
 ```
 The only difference here is that I've included the rest of the workflow definition at the top (you cannot just create a file with steps, but I imagine if you're here, you likely already know that). 
 
-But more importantly, I added the `with` keyword with the `extra_plugins` to list the non-default plugins I've configured in the `.releaserc.json`.
+But more importantly, I added the `with` keyword with the `extra_plugins` to list the non-default plugins I've configured in the `.releaserc.json`. You'll also notice that `conventional-changelog-eslint` is listed in the extra_plugins. This is needed because I've used the `eslint` preset for a couple of the plugins, which defines the `releaseRules` we can use.
 
 This is a feature of the *Semantic Release Action* GitHub Action.
 
@@ -402,3 +404,4 @@ This GitHub Action is awesome because it does all the work. We don't have to eve
 - [@semantic-release/changelog](https://github.com/semantic-release/changelog)
 - [@semantic-release/github](https://github.com/semantic-release/github)
 - [@semantic-release/git](https://github.com/semantic-release/git)
+- [conventional-changelog-eslint](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-eslint)
