@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/svdo-science/svdoscience.com/compare/v1.3.0...v1.4.0) (2020-11-14)
+
+
+### Update
+
+* updates to 2020-10-31/semantic-release post ([c39cc89](https://github.com/svdo-science/svdoscience.com/commit/c39cc892c3ac82622d9ba1ce0088e3757f0cb668))
+
 # [1.3.0](https://github.com/svdo-science/svdoscience.com/compare/v1.2.0...v1.3.0) (2020-11-02)
 
 
