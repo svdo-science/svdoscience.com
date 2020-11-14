@@ -1,5 +1,5 @@
 ---
-title: "Versioning with semantic-release"
+title: "Versioning with the Semantic Release GitHub Action"
 date: "2020-10-31"
 path: "/2020-10-31/versioning-with-semantic-release"
 coverImage: "./2-semantic-release.png"
