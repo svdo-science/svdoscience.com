@@ -393,7 +393,7 @@ And... that's about it! ✨
 
 This GitHub Action is awesome because it does all the work. We don't have to even include semantic-release as a dependency, or write any custom jobs that run semantic-release to do the versioning. The GitHub action just needs our configuration and then says, "I'll take it from here."
 
-# Link
+# Links
 
 - [Semantic Release - Usage - Configuration](https://semantic-release.gitbook.io/semantic-release/usage/configuration)
 
