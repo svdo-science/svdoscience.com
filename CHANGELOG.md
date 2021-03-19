@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/svdo-science/svdoscience.com/compare/v1.4.0...v1.4.1) (2021-03-19)
+
+
+### Fix
+
+* fix grammatical errors in semantic release post ([a6448f5](https://github.com/svdo-science/svdoscience.com/commit/a6448f5b04a2b4adfcb7b3e3f87e876dcda02a15))
+
 # [1.4.0](https://github.com/svdo-science/svdoscience.com/compare/v1.3.0...v1.4.0) (2020-11-14)
 
 
