@@ -1,3 +1,17 @@
+# [1.5.0](https://github.com/svdo-science/svdoscience.com/compare/v1.4.1...v1.5.0) (2021-03-19)
+
+
+### Chore
+
+* fix release.yml workflow ([464f25d](https://github.com/svdo-science/svdoscience.com/commit/464f25d4f6412da4a1479a5600f5477a5fb8131c))
+* update .release.json to use main branch ([24d95bd](https://github.com/svdo-science/svdoscience.com/commit/24d95bd2c4aa95f3b640b6750142692992060656))
+* update GitHubActions release workflow's target branch ([8491dc9](https://github.com/svdo-science/svdoscience.com/commit/8491dc91cbe22eed0dd3b3abf916990967a37049))
+
+### Update
+
+* semantic-release post indentation and GitHub Actions workflow yaml example ([941433c](https://github.com/svdo-science/svdoscience.com/commit/941433cbc87d9393143cf3ca0b659b5182bc0046))
+* update branch names in semantic-release post ([a6597bc](https://github.com/svdo-science/svdoscience.com/commit/a6597bc69fac64e44248c453d9f4aa437be37939))
+
 ## [1.4.1](https://github.com/svdo-science/svdoscience.com/compare/v1.4.0...v1.4.1) (2021-03-19)
 
 
