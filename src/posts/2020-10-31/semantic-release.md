@@ -29,7 +29,7 @@ Then, put this in it:
 
 ```json
 {
-    "branch": "master",
+    "branch": "main",
     "plugins": [
         [
             "@semantic-release/commit-analyzer",
@@ -89,7 +89,7 @@ Then, put this in it:
 name: Release
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   release:
@@ -167,7 +167,7 @@ This means that if you have a bare-bones `.releaserc.json` file like this:
 
 ```json
 {
-	"branches": ["master"]
+	"branches": ["main"]
 }
 ```
 
@@ -175,7 +175,7 @@ This is the equivalent of the following:
 
 ```json
 {
-  "branches": ["master"],
+  "branches": ["main"],
 	"plugins": [
 		"@semantic-release/commit-analyzer",
 		"@semantic-release/release-notes-generator",
@@ -212,7 +212,7 @@ I needed to specify a `"preset"` and the `"releaseRules"` for that preset.
 
 ```json
 {
-    "branch": "master",
+    "branch": "main",
     "plugins": [
         [
             "@semantic-release/commit-analyzer",
@@ -245,7 +245,7 @@ This plugin is for generating the release notes content, and the configuration i
 
 ```json
 {
-    "branch": "master",
+    "branch": "main",
     "plugins": [
         ...
         [
@@ -275,7 +275,7 @@ This plugin is for updating the `CHANGELOG.md` file with the release notes.
 
 ```json
 {
-    "branch": "master",
+    "branch": "main",
     "plugins": [
         ...
         [
@@ -296,7 +296,7 @@ This plugin is for creating the GitHub "Release."
 
 ```json
 {
-    "branch": "master",
+    "branch": "main",
     "plugins": [
         ...
         "@semantic-release/github",
@@ -313,7 +313,7 @@ This plugin is needed to add a release commit for the changes to the CHANGELOG.m
 
 ```json
 {
-    "branch": "master",
+    "branch": "main",
     "plugins": [
         ...
         [
@@ -360,7 +360,7 @@ Since we are not using the default plugins, we need to update this a bit to the 
 name: Release
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   release:
