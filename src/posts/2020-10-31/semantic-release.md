@@ -4,11 +4,11 @@ date: "2020-10-31"
 path: "/2020-10-31/versioning-with-semantic-release"
 coverImage: "./2-semantic-release.png"
 author: "Joel"
-excerpt: "In this post I'll, run through configuring the Semantic Release GitHub Action to automation versioning, creating GitHub Releases, and documenting release notes."
+excerpt: "In this post, I'll run through configuring the Semantic Release GitHub Action to automate versioning, create GitHub Releases, and document release notes."
 tags: ["ci", "versioning", "github actions", "dev ops", "semantic release"]
 ---
 
-In this post, I'll run through configuring the Semantic Release GitHub Action to automation versioning, creating GitHub Releases, and documenting release notes.
+In this post, I'll run through configuring the Semantic Release GitHub Action to automate versioning, create GitHub Releases, and document release notes.
 
 As I started writing this, it occurred to me that there might be two types of folks reading this.
 - One set who just want the answers to the test
