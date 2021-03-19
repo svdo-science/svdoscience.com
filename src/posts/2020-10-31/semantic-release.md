@@ -29,52 +29,52 @@ Then, put this in it:
 
 ```json
 {
-    "branch": "main",
-    "plugins": [
-        [
-            "@semantic-release/commit-analyzer",
-            {
-                "preset": "eslint",
-                "releaseRules": [
-                    { "tag": "Breaking", "release": "major" },
-                    { "tag": "Build", "release": "minor" },
-                    { "tag": "Chore", "release": "minor" },
-                    { "tag": "Fix", "release": "patch" },
-                    { "tag": "New", "release": "minor" },
-                    { "tag": "Update", "release": "minor" },
-                    { "tag": "Upgrade", "release": "minor" }
-                ]
-            }
-        ],
-        [
-            "@semantic-release/release-notes-generator",
-            {
-                "preset": "eslint",
-                "releaseRules": [
-                    { "tag": "Breaking", "release": "major" },
-                    { "tag": "Build", "release": "minor" },
-                    { "tag": "Chore", "release": "minor" },
-                    { "tag": "Fix", "release": "patch" },
-                    { "tag": "New", "release": "minor" },
-                    { "tag": "Update", "release": "minor" },
-                    { "tag": "Upgrade", "release": "minor" }
-                ]
-            }
-        ],
-        [
-            "@semantic-release/changelog",
-            {
-                "changelogFile": "CHANGELOG.md"
-            }
-        ],
-        "@semantic-release/github",
-        [
-            "@semantic-release/git", {
-                "assets": ["package.json", "CHANGELOG.md"],
-                "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-            }
+  "branch": "main",
+  "plugins": [
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "eslint",
+        "releaseRules": [
+          { "tag": "Breaking", "release": "major" },
+          { "tag": "Build", "release": "minor" },
+          { "tag": "Chore", "release": "minor" },
+          { "tag": "Fix", "release": "patch" },
+          { "tag": "New", "release": "minor" },
+          { "tag": "Update", "release": "minor" },
+          { "tag": "Upgrade", "release": "minor" }
         ]
+      }
+    ],
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        "preset": "eslint",
+        "releaseRules": [
+          { "tag": "Breaking", "release": "major" },
+          { "tag": "Build", "release": "minor" },
+          { "tag": "Chore", "release": "minor" },
+          { "tag": "Fix", "release": "patch" },
+          { "tag": "New", "release": "minor" },
+          { "tag": "Update", "release": "minor" },
+          { "tag": "Upgrade", "release": "minor" }
+        ]
+      }
+    ],
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
+    "@semantic-release/github",
+    [
+      "@semantic-release/git", {
+        "assets": ["package.json", "CHANGELOG.md"],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
     ]
+  ]
 }
 ```
 
@@ -96,19 +96,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-        - name: Checkout
-          uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
-        - name: Semantic Release
-          uses: cycjimmy/semantic-release-action@v2
-          id: semantic
-          with:
-            extra_plugins: |
-              @semantic-release/changelog
-              @semantic-release/git
-              conventional-changelog-eslint
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v2
+        id: semantic
+        with:
+          semantic_version: 16
+          extra_plugins: |
+            @semantic-release/changelog
+            @semantic-release/git
+            conventional-changelog-eslint
+          branches: |
+            ['main']
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 ---
@@ -212,25 +215,25 @@ I needed to specify a `"preset"` and the `"releaseRules"` for that preset.
 
 ```json
 {
-    "branch": "main",
-    "plugins": [
-        [
-            "@semantic-release/commit-analyzer",
-            {
-                "preset": "eslint",
-                "releaseRules": [
-                    { "tag": "Breaking", "release": "major" },
-                    { "tag": "Build", "release": "minor" },
-                    { "tag": "Chore", "release": "minor" },
-                    { "tag": "Fix", "release": "patch" },
-                    { "tag": "New", "release": "minor" },
-                    { "tag": "Update", "release": "minor" },
-                    { "tag": "Upgrade", "release": "minor" }
-                ]
-            }
-        ],
-        ...
-    ]
+  "branch": "main",
+  "plugins": [
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "preset": "eslint",
+        "releaseRules": [
+          { "tag": "Breaking", "release": "major" },
+          { "tag": "Build", "release": "minor" },
+          { "tag": "Chore", "release": "minor" },
+          { "tag": "Fix", "release": "patch" },
+          { "tag": "New", "release": "minor" },
+          { "tag": "Update", "release": "minor" },
+          { "tag": "Upgrade", "release": "minor" }
+        ]
+      }
+    ],
+    ...
+  ]
 }
 ```
 
@@ -245,26 +248,26 @@ This plugin is for generating the release notes content, and the configuration i
 
 ```json
 {
-    "branch": "main",
-    "plugins": [
-        ...
-        [
-            "@semantic-release/release-notes-generator",
-            {
-                "preset": "eslint",
-                "releaseRules": [
-                    { "tag": "Breaking", "release": "major" },
-                    { "tag": "Build", "release": "minor" },
-                    { "tag": "Chore", "release": "minor" },
-                    { "tag": "Fix", "release": "patch" },
-                    { "tag": "New", "release": "minor" },
-                    { "tag": "Update", "release": "minor" },
-                    { "tag": "Upgrade", "release": "minor" }
-                ]
-            }
-        ],
-        ...
-    ]
+  "branch": "main",
+  "plugins": [
+    ...
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        "preset": "eslint",
+        "releaseRules": [
+          { "tag": "Breaking", "release": "major" },
+          { "tag": "Build", "release": "minor" },
+          { "tag": "Chore", "release": "minor" },
+          { "tag": "Fix", "release": "patch" },
+          { "tag": "New", "release": "minor" },
+          { "tag": "Update", "release": "minor" },
+          { "tag": "Upgrade", "release": "minor" }
+        ]
+      }
+    ],
+    ...
+  ]
 }
 ```
 
@@ -275,17 +278,17 @@ This plugin is for updating the `CHANGELOG.md` file with the release notes.
 
 ```json
 {
-    "branch": "main",
-    "plugins": [
-        ...
-        [
-            "@semantic-release/changelog",
-            {
-                "changelogFile": "CHANGELOG.md"
-            }
-        ],
-        ...
-    ]
+  "branch": "main",
+  "plugins": [
+    ...
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
+    ...
+  ]
 }
 ```
 >**Note**: the value for `changelogFile` is a path to the file which will contain the release notes, which by convention is the CHANGELOG.md file.
@@ -296,12 +299,12 @@ This plugin is for creating the GitHub "Release."
 
 ```json
 {
-    "branch": "main",
-    "plugins": [
-        ...
-        "@semantic-release/github",
-        ...
-    ]
+  "branch": "main",
+  "plugins": [
+    ...
+    "@semantic-release/github",
+    ...
+  ]
 }
 ```
 I didn't need to add any configuration for this one, so it can simply be added to the `"plugins"` array as a string, rather than a list.
@@ -313,17 +316,17 @@ This plugin is needed to add a release commit for the changes to the CHANGELOG.m
 
 ```json
 {
-    "branch": "main",
-    "plugins": [
-        ...
-        [
-            "@semantic-release/git", {
-                "assets": ["package.json", "CHANGELOG.md"],
-                "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-            }
-        ]
-        ...
+  "branch": "main",
+  "plugins": [
+    ...
+    [
+      "@semantic-release/git", {
+        "assets": ["package.json", "CHANGELOG.md"],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
     ]
+    ...
+  ]
 }
 ```
 I also included the `"package.json"` file hoping that its version would also be updated, but no dice. If anyone knows why that is, hit me up! Lol.
@@ -367,19 +370,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-        - name: Checkout
-          uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
-        - name: Semantic Release
-          uses: cycjimmy/semantic-release-action@v2
-          id: semantic
-          with:
-            extra_plugins: |
-              @semantic-release/changelog
-              @semantic-release/git
-              conventional-changelog-eslint
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v2
+        id: semantic
+        with:
+          semantic_version: 16
+          extra_plugins: |
+            @semantic-release/changelog
+            @semantic-release/git
+            conventional-changelog-eslint
+          branches: |
+            ['main']
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 The only difference here is that I've included the rest of the workflow definition at the top (you cannot just create a file with steps, but I imagine if you're here, you likely already know that). 
 
