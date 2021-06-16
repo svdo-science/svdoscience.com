@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/svdo-science/svdoscience.com/compare/v1.7.0...v1.8.0) (2021-06-16)
+
+
+### Chore
+
+* adds semantic-release/npm for updating package.json ([fb5a0eb](https://github.com/svdo-science/svdoscience.com/commit/fb5a0eb22cfb8fe7bc8e149eb57fe229c54be009))
+
 # [1.7.0](https://github.com/svdo-science/svdoscience.com/compare/v1.6.0...v1.7.0) (2021-06-16)
 
 
