@@ -64,6 +64,7 @@
     "prettier": "^1.15.2",
     "rambdax": "^1.8.0"
   },
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/svdo-science/svdoscience.com"
