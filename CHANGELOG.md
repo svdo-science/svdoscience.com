@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/svdo-science/svdoscience.com/compare/v1.5.0...v1.6.0) (2021-06-16)
+
+
+### Chore
+
+* fix semantic-version for repo package.json, take 2 ([75b5571](https://github.com/svdo-science/svdoscience.com/commit/75b5571626075394567585b19f81cba68ce9b958))
+
 # [1.5.0](https://github.com/svdo-science/svdoscience.com/compare/v1.4.1...v1.5.0) (2021-03-19)
 
 
