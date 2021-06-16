@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/svdo-science/svdoscience.com/compare/v1.6.0...v1.7.0) (2021-06-16)
+
+
+### Chore
+
+* set private=true in package.json ([73ba870](https://github.com/svdo-science/svdoscience.com/commit/73ba870d9a3ec253ef61cfa8515e639a97d46828))
+
 # [1.6.0](https://github.com/svdo-science/svdoscience.com/compare/v1.5.0...v1.6.0) (2021-06-16)
 
 
