@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/svdo-science/svdoscience.com/compare/v1.8.0...v1.9.0) (2021-09-28)
+
+
+### New
+
+* adds pages/iotext.md ([921f4ce](https://github.com/svdo-science/svdoscience.com/commit/921f4ce577b4a765d88f4f848f045e418d13f908))
+
 # [1.8.0](https://github.com/svdo-science/svdoscience.com/compare/v1.7.0...v1.8.0) (2021-06-16)
 
 
