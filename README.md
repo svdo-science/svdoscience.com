@@ -1,8 +1,8 @@
 # svdoscience.com
 
-Website for svdoscience.com created from the awesome Mr. Robot-inspired "Hello Friend" [GatsbyJS](https://www.gatsbyjs.com/) starter made by [@panr](https://radoslawkoziel.pl)
+Website for [svdoscience.com](https://svdoscience.com) created from the awesome Mr. Robot-inspired "Hello Friend" [GatsbyJS](https://www.gatsbyjs.com/) starter made by [@panr](https://radoslawkoziel.pl)
 
-# Setup
+## Setup
 
 Run the following commands to clone the repository and install dependencies.
 
