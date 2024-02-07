@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import Navigation from './navigation'
 import { toKebabCase } from '../helpers'
 
-import style from '../styles/post.module.css'
+import * as style from '../styles/post.module.css'
 
 const Post = ({
   title,
@@ -44,8 +44,9 @@ const Post = ({
         </div>
 
         {coverImage && (
-          <Img
-            fluid={coverImage.childImageSharp.fluid}
+          <GatsbyImage
+            image={coverImage.childImageSharp.gatsbyImageData}
+            alt=""
             className={style.coverImage}
           />
         )}
@@ -70,7 +71,7 @@ const Post = ({
         )}
       </div>
     </div>
-  )
+  );
 }
 
 Post.propTypes = {

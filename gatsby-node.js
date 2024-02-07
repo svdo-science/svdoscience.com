@@ -3,6 +3,12 @@ const { forEach, uniq, filter, not, isNil, flatMap } = require('rambdax')
 const path = require('path')
 const { toKebabCase } = require('./src/helpers')
 
+// import { paginate } from 'gatsby-awesome-pagination'
+// import { forEach, uniq, filter, not, isNil, flatMap } from 'rambdax'
+// import path from 'path'
+// import { toKebabCase } from './src/helpers'
+// import { CreateBabelConfigArgs } from 'gatsby';
+
 const pageTypeRegex = /src\/(.*?)\//
 const getType = node => node.fileAbsolutePath.match(pageTypeRegex)[1]
 
@@ -10,6 +16,9 @@ const pageTemplate = path.resolve(`./src/templates/page.js`)
 const indexTemplate = path.resolve(`./src/templates/index.js`)
 const tagsTemplate = path.resolve(`./src/templates/tags.js`)
 
+// exports.onCreateBabelConfig = ({ actions }) => {
+//   actions.setBabelPreset({ name: 'babel-preset-gatsby', options: {} });
+// };
 exports.createPages = ({ actions, graphql, getNodes }) => {
   const { createPage } = actions
   const allNodes = getNodes()
@@ -17,7 +26,7 @@ exports.createPages = ({ actions, graphql, getNodes }) => {
   return graphql(`
     {
       allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { frontmatter: {date: DESC }}
         limit: 1000
       ) {
         edges {
@@ -41,6 +50,7 @@ exports.createPages = ({ actions, graphql, getNodes }) => {
     if (result.errors) {
       return Promise.reject(result.errors)
     }
+    console.log(result.data.allMarkdownRemark.edges[0].node.frontmatter)
 
     const {
       allMarkdownRemark: { edges: markdownPages },
