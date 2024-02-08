@@ -8,6 +8,10 @@ const postCSSMixins = require('postcss-mixins')
 const year = new Date().getFullYear()
 
 module.exports = {
+  flags: {
+    DEV_SSR: true,
+    DETECT_NODE_MUTATIONS: true,
+  },
   siteMetadata: {
     title: `SVDO Science`,
     description: `SVDO Science. Blog posts about my adventures in code.`,
@@ -30,7 +34,7 @@ module.exports = {
     ],
   },
   plugins: [
-    `babel-preset-gatsby`,
+    // `babel-preset-gatsby`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -74,6 +78,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -98,7 +103,7 @@ module.exports = {
               classPrefix: 'language-',
               inlineCodeMarker: null,
               aliases: {},
-              showLineNumbers: false,
+              showLineNumbers: true,
               noInlineHighlight: false,
             },
           },

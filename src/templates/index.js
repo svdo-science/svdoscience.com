@@ -63,37 +63,33 @@ Index.propTypes = {
   }),
 }
 
-export const postsQuery = graphql`
-  query($limit: Int!, $skip: Int!) {
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//posts//" } }
-      sort: { fields: [frontmatter___date], order: DESC }
-      limit: $limit
-      skip: $skip
-    ) {
-      edges {
-        node {
-          id
+export const postsQuery = graphql`query ($limit: Int!, $skip: Int!) {
+  allMarkdownRemark(
+    filter: {fileAbsolutePath: {regex: "//posts//"}}
+    sort: {frontmatter: {date: DESC}}
+    limit: $limit
+    skip: $skip
+  ) {
+    edges {
+      node {
+        id
+        excerpt
+        frontmatter {
+          title
+          date(formatString: "DD MMMM YYYY")
+          path
+          author
           excerpt
-          frontmatter {
-            title
-            date(formatString: "DD MMMM YYYY")
-            path
-            author
-            excerpt
-            tags
-            coverImage {
-              childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+          tags
+          coverImage {
+            childImageSharp {
+              gatsbyImageData(width: 800, layout: CONSTRAINED)
             }
           }
         }
       }
     }
   }
-`
+}`
 
 export default Index
